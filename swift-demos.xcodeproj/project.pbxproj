@@ -16,6 +16,7 @@
 		9B169A86200499130017E7ED /* swift_demosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169A85200499130017E7ED /* swift_demosUITests.swift */; };
 		9B169A942006051F0017E7ED /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169A932006051F0017E7ED /* SuperViewController.swift */; };
 		9B169A96200605810017E7ED /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169A95200605810017E7ED /* BaseViewController.swift */; };
+		9B169A982006663D0017E7ED /* AdvanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169A972006663D0017E7ED /* AdvanceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9B169A87200499130017E7ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B169A932006051F0017E7ED /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperViewController.swift; sourceTree = "<group>"; };
 		9B169A95200605810017E7ED /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9B169A972006663D0017E7ED /* AdvanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				9B169A6E200499130017E7ED /* LaunchScreen.storyboard */,
 				9B169A71200499130017E7ED /* Info.plist */,
 				9B169A95200605810017E7ED /* BaseViewController.swift */,
+				9B169A972006663D0017E7ED /* AdvanceViewController.swift */,
 			);
 			path = "swift-demos";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				9B169A68200499130017E7ED /* ViewController.swift in Sources */,
 				9B169A96200605810017E7ED /* BaseViewController.swift in Sources */,
 				9B169A942006051F0017E7ED /* SuperViewController.swift in Sources */,
+				9B169A982006663D0017E7ED /* AdvanceViewController.swift in Sources */,
 				9B169A66200499130017E7ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
