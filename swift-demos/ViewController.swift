@@ -8,14 +8,148 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: SuperViewController,UITableViewDataSource,UITableViewDelegate {
+    let array: [String] = ["基础部分","UILabel","good"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setCustomTitle(title: "Swift")
+        let tableView = UITableView(frame: self.view.bounds ,style: UITableViewStyle.plain)
+        self.view .addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
 //        base_first()
 //        base_second()
-        base_third()
+//        base_third()
+//        base_forth()
+//        base_sixth()
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return array.count
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = array[indexPath.row]
+        cell.textLabel?.textAlignment = NSTextAlignment.center
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    func base_sixth() {
+        print(greet(person: "Tom!"))
+        let bounds = minMax(array: [1,2,-3,9,5,3])
+        print(bounds.max,bounds.min)
+    }
+    func base_forth() -> () {
+        // 创建空的数组
+        var someInts = [Int]()
+        print("someInts is of type [Int] with \(someInts.count) items")
+        someInts.append(3)
+        print(someInts)
+        someInts = []
+        print(someInts)
+        // 使用默认方式创建数组
+        let doubles = Array(repeating: 0.0,count: 3)
+        let anthers = Array(repeatElement(0.0, count: 4))
+        print(doubles,anthers)
+        // 通过连接两个数组来创建数组
+        let other = doubles + anthers
+        print(other)
+        // 使用数组字面量创建数组
+        let list: [String] = ["Jack","Tom"]
+        print(list)
+        // 使用数组
+        var changeA: [String] = ["good","hello","yes"]
+        print(changeA.count,changeA.isEmpty)
+        // 增加单个元素
+        changeA.append("better")
+        print(changeA)
+        // 增加多个元素
+        changeA += ["today","world"]
+        print(changeA)
+        // 修改一个元素
+        changeA[0] = "fu"
+        print(changeA)
+        // 修改多个元素
+        changeA[1...2] = ["zong","jian"]
+        print(changeA)
+        // 插入元素
+        changeA.insert("first", at: 0)
+        print(changeA)
+        // 删除
+        changeA.remove(at: 0)
+        print(changeA)
+        
+        // 遍历
+        let newlist: [String] = ["fu","zong","jian"]
+        // 值
+        for item in newlist {
+            print(item)
+        }
+        // 索引和值
+        for (index,value) in newlist.enumerated() {
+            print("item \(index + 1):\(value)")
+        }
+        // 合集
+        // 创建并初始化一个空合集
+        var letters = Set<Character>()
+        print(letters)
+        letters.insert("a")
+        print(letters)
+        // 使用数组字面量创建合集
+        let newSet: Set<String> = ["Rock","Classical","Hip hop"]
+        print(newSet)
+        // 增
+        var sets: Set = ["Rock","Classical","Hip hop"]
+        sets.insert("Jazz")
+        print(sets,sets.isEmpty,sets.count)
+        // 移除
+        print(sets.remove("Hip hop")!)
+        print(sets)
+        // 包含
+        print(sets.contains("Rock"))
+        // 遍历
+        for type in sets {
+            print(type)
+        }
+        for type in sets.sorted() {
+            print(type)
+        }
+        // 合集基本操作
+        let odd: Set = [1,3,5,7,9]
+        let even: Set = [0,2,4,6,8]
+        let single: Set = [2,3,5,7]
+        print(odd.union(even).sorted())
+        print(odd.intersection(even).sorted())
+        print(odd.subtracting(single).sorted())
+        print(odd.symmetricDifference(single).sorted())
+        // 合集成员关系和相等性
+        // 创建一个空字典
+        var nameDic = [Int: String]()
+        nameDic[2] = "hello"
+        nameDic[10] = "world"
+        print(nameDic)
+        var airports: [String:String]=["A":"a","B":"b","C":"c","D":"d"]
+        print(airports.count,airports.isEmpty)
+        let oldValue = airports.updateValue("c", forKey: "B")!
+        print(oldValue,airports)
+        // 移除
+        airports["C"] = nil
+        airports.removeValue(forKey: "B")
+        print(airports)
+        //遍历
+        for (key,value) in airports {
+            print("\(key) : \(value)")
+        }
+        for key in airports.keys{
+            print(key)
+        }
+        for value in airports.values {
+            print(value)
+        }
     }
     func base_third() -> () {
         // 单行
@@ -53,6 +187,43 @@ class ViewController: UIViewController {
         var my = "fuzong"
         my.append(newchar)
         print(my)
+        // 索引
+        let greet = "hello world"
+        print(greet[greet.startIndex])
+        print(greet[greet.index(after: greet.startIndex)])
+        print(greet[greet.index(before: greet.endIndex)])
+        print(greet[greet.index(greet.startIndex, offsetBy: 4)])
+        for index in greet.characters.indices {
+            print("\(greet[index])")
+        }
+        // 插入和删除
+        var well = "hello"
+        well.insert("!", at: well.endIndex)
+        print(well)
+        well.insert(contentsOf: " world", at: well.index(before: well.endIndex))
+        print(well)
+        well.remove(at: well.index(before: well.endIndex))
+        print(well)
+        let range = well.index(well.endIndex, offsetBy: -6)..<well.endIndex
+        well.removeSubrange(range)
+        print(well)
+        // 子字符串
+        let test = "Hello,world!"
+        let index = test.index(of: ",") ?? test.endIndex
+        // 与test公用内存呢
+        let new1 = test[..<index]
+        print(new1)
+        // 独立内存
+        let new2 = String(new1)
+        print(new2)
+        // 前缀后缀
+        let test_1 = "yesterday"
+        if test_1.hasPrefix("yes") {
+            print("contain substring yes")
+        }
+        if test_1.hasSuffix("day") {
+            print("contain substring day")
+        }
     }
     func base_second() -> () {
         // 三元条件运算符
@@ -111,7 +282,7 @@ class ViewController: UIViewController {
         let status = true
         print(status)
         let i = 1
-        if i == 2 {
+        if i == 1 {
             print("hello")
         }else{
             print("world")
@@ -154,6 +325,22 @@ class ViewController: UIViewController {
         }
         // 强制先决条件
         precondition(age > 0,"a person's age cannot be less than zero")
+    }
+    func greet(person: String) -> String {
+        return "hello " + person
+    }
+    func minMax(array: [Int]) -> (min: Int,max: Int) {
+        var min_ = array[0]
+        var max_ = array[0]
+        for value in array {
+            if min_ > value {
+                min_ = value
+            }
+            if max_ < value {
+                max_ = value
+            }
+        }
+        return (min_,max_)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
