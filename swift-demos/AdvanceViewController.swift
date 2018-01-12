@@ -31,6 +31,17 @@ class AdvanceViewController: SuperViewController,UITextFieldDelegate {
         addSearchBar()
         addTextView()
         addCollection()
+        addPhoto()
+        
+    }
+    func addPhoto(){
+        
+        let search = UIButton(type: .system)
+        search.frame = CGRect.init(x: 5, y: 5, width: width-10, height: height-10)
+        search.setTitle("相册", for: .normal)
+        search.tag = 10002
+        search.addTarget(self, action: #selector(searchClick(_:)), for: .touchUpInside)
+        viewArray[14].addSubview(search)
     }
     func addTextView() {
         let textView = UITextView()
@@ -245,8 +256,10 @@ class AdvanceViewController: SuperViewController,UITextFieldDelegate {
     func searchClick(_ sender: UIButton) {
         if sender.tag == 10000 {
             self.navigationController?.pushViewController(SearchBarController(), animated: true)
-        }else{
+        }else if sender.tag == 10001{
             self.navigationController?.pushViewController(CollectionController(), animated: true)
+        }else if sender.tag == 10002{
+            self.navigationController?.pushViewController(PhotoController(), animated: true)
         }
         
     }

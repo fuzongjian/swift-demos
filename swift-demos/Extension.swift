@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 extension UIView{
     var size: CGSize { return self.bounds.size }
+    var width: CGFloat { return self.bounds.size.width }
+    var height: CGFloat { return self.bounds.size.height }
     var bottom : CGFloat { return self.frame.origin.y+self.frame.size.height }
 }
 func rgba(r: CGFloat,g: CGFloat,b: CGFloat,a: CGFloat) -> UIColor {
