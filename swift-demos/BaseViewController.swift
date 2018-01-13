@@ -17,8 +17,38 @@ class BaseViewController: SuperViewController {
         //        base_second()
         //        base_third()
         //        base_forth()
-                base_sixth()
-        // Do any additional setup after loading the view.
+        //        base_sixth()
+        base_seventh()
+    }
+    func base_seventh() {
+        // 没有任何参数
+        let no = {print("没有参数哟")}
+        no()
+        // 有参数没有返回值
+        let hello = {(name: String) -> () in
+            print("hello \(name)")
+        }
+        hello("fuzongjian")
+        // 有参数有返回值
+        let count = {(numa: Int,numb: Int)->Int in
+            return numa + numb
+        }
+        print(count(1,3))
+        // 闭包的应用
+        load_data(completion: {(result)->() in
+            print("获取的结果是\(result)")
+        })
+    }
+    func load_data(completion:@escaping(_:[String])->()) {
+        DispatchQueue.global().async {
+            print("耗时操作\(Thread.current)")
+            Thread.sleep(forTimeInterval: 1)
+            let json = ["上海","北京","天津"]
+            DispatchQueue.main.async(execute: {
+                print("主线程更新\(Thread.current)")
+                completion(json)
+            })
+        }
     }
     func base_sixth() {
         print(greet(person: "Tom!"))
