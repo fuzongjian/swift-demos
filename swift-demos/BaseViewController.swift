@@ -9,7 +9,12 @@
 import UIKit
 
 class BaseViewController: SuperViewController {
-
+    enum ClassType{
+        case north
+        case south
+        case east
+        case west
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor=UIColor.white
@@ -18,7 +23,22 @@ class BaseViewController: SuperViewController {
         //        base_third()
         //        base_forth()
         //        base_sixth()
-        base_seventh()
+        //        base_seventh()
+        base_eighth()
+    }
+    func base_eighth() {
+        var header = ClassType.north
+        header = .south
+        switch header {
+        case .east:
+            print("east")
+        case .west:
+            print("west")
+        case .south:
+            print("south")
+        default:
+            print("north")
+        }
     }
     func base_seventh() {
         // 没有任何参数
@@ -38,6 +58,9 @@ class BaseViewController: SuperViewController {
         load_data(completion: {(result)->() in
             print("获取的结果是\(result)")
         })
+        load_data { (result) in
+            print("hhhh\(result)")
+        }
     }
     func load_data(completion:@escaping(_:[String])->()) {
         DispatchQueue.global().async {
@@ -50,6 +73,11 @@ class BaseViewController: SuperViewController {
             })
         }
     }
+//    public func DispatchAfter(after: Double,handler:@escaping ()->()) {
+//        DispatchQueue.main.asyncAfter(deadline: .now()+after) {
+//            handler()
+//        }
+//    }
     func base_sixth() {
         print(greet(person: "Tom!"))
         let bounds = minMax(array: [1,2,-3,9,5,3])

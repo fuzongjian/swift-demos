@@ -24,6 +24,7 @@ class SuperViewController: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
         // Dispose of any resources that can be recreated.
     }
     public func DispatchAfter(after: Double,handler:@escaping ()->()) {
