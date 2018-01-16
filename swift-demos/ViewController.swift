@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: SuperViewController,UITableViewDataSource,UITableViewDelegate {
-    let array: [String] = ["基础部分","控件","good"]
+    let array: [String] = ["基础部分","控件","三方库的使用"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "Swift")
@@ -18,7 +18,6 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
-
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
@@ -38,6 +37,8 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
             self.navigationController?.pushViewController(BaseViewController(), animated: true)
         }else if indexPath.row == 1 {
             self.navigationController?.pushViewController(AdvanceViewController(), animated: true)
+        }else if indexPath.row == 2{
+            self.navigationController?.pushViewController(PodViewController(), animated: true)
         }
         
     }

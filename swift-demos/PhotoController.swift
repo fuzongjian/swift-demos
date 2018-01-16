@@ -54,6 +54,7 @@ class PhotoController: SuperViewController,UIImagePickerControllerDelegate,UINav
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("取消")
+        picker.dismiss(animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

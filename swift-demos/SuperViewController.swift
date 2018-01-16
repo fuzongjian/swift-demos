@@ -12,7 +12,7 @@ class SuperViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
     func setCustomTitle(title: String) {
