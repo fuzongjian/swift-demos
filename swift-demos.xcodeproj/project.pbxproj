@@ -25,6 +25,7 @@
 		9B169AA320075F950017E7ED /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169AA220075F950017E7ED /* CustomCollectionCell.swift */; };
 		9BB04402200DEAEA009641A5 /* PodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04401200DEAEA009641A5 /* PodViewController.swift */; };
 		9BB04406200DEF04009641A5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04405200DEF04009641A5 /* Service.swift */; };
+		9BB0440D200F3AE4009641A5 /* SnapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0440C200F3AE4009641A5 /* SnapKitController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		9BB04401200DEAEA009641A5 /* PodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodViewController.swift; sourceTree = "<group>"; };
 		9BB04405200DEF04009641A5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9BB04408200F1C51009641A5 /* swift-demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-demos-Bridging-Header.h"; sourceTree = "<group>"; };
+		9BB0440C200F3AE4009641A5 /* SnapKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKitController.swift; sourceTree = "<group>"; };
 		CBC8CCD33000AD91000B2767 /* Pods_swift_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2411E5C0D2AFF1686B2B799 /* Pods-swift-demos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-demos.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-demos/Pods-swift-demos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 				9BB04401200DEAEA009641A5 /* PodViewController.swift */,
 				9BB04405200DEF04009641A5 /* Service.swift */,
 				9BB04408200F1C51009641A5 /* swift-demos-Bridging-Header.h */,
+				9BB0440C200F3AE4009641A5 /* SnapKitController.swift */,
 			);
 			path = "swift-demos";
 			sourceTree = "<group>";
@@ -357,12 +360,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-swift-demos/Pods-swift-demos-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB0440D200F3AE4009641A5 /* SnapKitController.swift in Sources */,
 				9BB04402200DEAEA009641A5 /* PodViewController.swift in Sources */,
 				9B08E1DE2008C07700513565 /* PhotoController.swift in Sources */,
 				9B169A68200499130017E7ED /* ViewController.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 
 class PodViewController: SuperViewController,UITableViewDelegate,UITableViewDataSource {
-    let dataArray :[String] = ["Alamofire(网络请求库)"]
+    let dataArray :[String] = ["Alamofire(网络请求库)","RxSwift","SnapKit"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "三方库的使用")
@@ -37,6 +37,10 @@ class PodViewController: SuperViewController,UITableViewDelegate,UITableViewData
         switch indexPath.row {
         case 0:
             method_alamofire()
+        case 1:
+            print("RxSwift")
+        case 2:
+            self.navigationController?.pushViewController(SnapKitController(), animated: true)
         default:
             print("default")
         }
