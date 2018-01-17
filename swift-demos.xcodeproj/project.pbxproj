@@ -69,6 +69,7 @@
 		9B169AA220075F950017E7ED /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		9BB04401200DEAEA009641A5 /* PodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodViewController.swift; sourceTree = "<group>"; };
 		9BB04405200DEF04009641A5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9BB04408200F1C51009641A5 /* swift-demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-demos-Bridging-Header.h"; sourceTree = "<group>"; };
 		CBC8CCD33000AD91000B2767 /* Pods_swift_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2411E5C0D2AFF1686B2B799 /* Pods-swift-demos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-demos.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-demos/Pods-swift-demos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +158,7 @@
 				9B08E1DD2008C07700513565 /* PhotoController.swift */,
 				9BB04401200DEAEA009641A5 /* PodViewController.swift */,
 				9BB04405200DEF04009641A5 /* Service.swift */,
+				9BB04408200F1C51009641A5 /* swift-demos-Bridging-Header.h */,
 			);
 			path = "swift-demos";
 			sourceTree = "<group>";
@@ -250,6 +252,7 @@
 				TargetAttributes = {
 					9B169A61200499130017E7ED = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					9B169A75200499130017E7ED = {
@@ -353,10 +356,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-swift-demos/Pods-swift-demos-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -548,14 +555,18 @@
 			baseConfigurationReference = 71FF12E89B2D3CC9687294CB /* Pods-swift-demos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZVLFRQ5L9;
 				INFOPLIST_FILE = "swift-demos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deltalpha.swift-demos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-demos/swift-demos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -564,14 +575,17 @@
 			baseConfigurationReference = F2411E5C0D2AFF1686B2B799 /* Pods-swift-demos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZVLFRQ5L9;
 				INFOPLIST_FILE = "swift-demos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deltalpha.swift-demos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-demos/swift-demos-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

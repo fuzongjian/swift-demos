@@ -42,11 +42,44 @@ class PodViewController: SuperViewController,UITableViewDelegate,UITableViewData
         }
     }
     func method_alamofire() {
-        let dic = [String: String]()
+        var dic = [String: Any]()
+        dic["name"] = "移动端"
+        dic["des"] = "主要用原生语言开发移动端"
+        print(dic)
+        request(path: PATH_POST, type: .post, parameters: dic) { (result, status) in
+            if status == true {
+                print(result)
+            }
+        }
+    }
+    func getMethod(dic: [String:Any]) {
+        // 第一种方法比较繁琐
+        //        request(path: PATH_GET, type: .get, parameters: dic) { (result, status) in
+        //            if status == true{
+        //                guard let json = result as? [String: AnyObject] else{
+        //                    return
+        //                }
+        //                guard let array = json["data"] as? [AnyObject] else{
+        //                    return
+        //                }
+        //                for obj in array {
+        //                    guard let objson = obj as? [String:String] else{
+        //                        return
+        //                    }
+        //                    print(objson["name"]!)
+        //                }
+        //
+        //            }
+        //        }
+
+        // get 方法
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         request(path: PATH_GET, type: .get, parameters: dic) { (result, status) in
-            if status == true{
-                
-                
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if status == true {
+                print(result["status"].boolValue)
+                print(result["data"].arrayValue[0]["name"].stringValue)
+                print(result["msg"].boolValue)
             }
         }
     }

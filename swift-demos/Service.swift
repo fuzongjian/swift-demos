@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 private let IP = "http://192.168.50.199:1010"
 public let PATH_GET = IP + "/department/findAll"
@@ -17,27 +18,31 @@ enum NetType{
     case get
     case post
 }
-class ServiceTool{
-    func request(path: String,type: NetType,parameters : [String : Any]? = nil,completed :  @escaping (_ result : Any,_ status : Bool) -> ()) {
-        let method = type == .get ? HTTPMethod.get : HTTPMethod.post
-        Alamofire.request(path, method: method, parameters: parameters).responseJSON { (response) in
-            guard let result = response.result.value else{
-                print("hello")
-                return
-            }
-            print("world")
-        }
-        
-    }
-}
-func request(path: String,type: NetType,parameters : [String : Any]? = nil,completed :  @escaping (_ result : Any,_ status : Bool) -> ()) {
+func request(path: String,type: NetType,parameters : [String : Any]? = nil,completed :  @escaping (_ result : JSON,_ status : Bool) -> ()) {
     let method = type == .get ? HTTPMethod.get : HTTPMethod.post
-    Alamofire.request(path, method: method, parameters: parameters).responseJSON { (response) in
+    let header: HTTPHeaders = [
+        "Accept": "application/json"
+    ]
+    Alamofire.request(path, method: method, parameters: parameters,encoding: JSONEncoding.default,headers: header).responseJSON { (response) in
         guard let result = response.result.value else{
-            completed(response.result.error!,false)
+//            completed(response.result.error!,false)
+            print(String(describing: response.result.error))
+            print("3---\(JSON(response.result.description))")
+            print("4---\(response.result.description)")
             return
         }
-        completed(result,true)
+//        completed(result,true)
+//        let json = JSON(result)
+//        print(json.type)
+//        print(json["msg"].stringValue)
+//        print(json["status"].boolValue)
+//        print(json["data"].arrayValue)
+//        let array = json["data"].arrayValue
+//        for obj in array{
+//            print(obj["name"].stringValue)
+//        }
+        print(JSON(result))
+        completed(JSON(result),true)
     }
     
 }
