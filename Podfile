@@ -6,4 +6,5 @@ target 'swift-demos’ do
     pod 'MBProgressHUD', '~> 1.1.0' # 加载动画
     pod 'RxSwift', '~> 4.0.0'  # ReactiveX
     pod 'SnapKit', '~> 4.0.0' # 自动布局
+    pod 'Kingfisher', '~> 4.2.0' # 类似于sdwebimage
 end
