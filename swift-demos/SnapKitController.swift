@@ -25,7 +25,11 @@ class SnapKitController: SuperViewController {
 //        eighthMethod()
 //        ninethMethod()
 //        tenthMethod()
-        elevenMethod()
+//        elevenMethod()
+        tenth()
+    }
+    func tenth() {
+        
     }
     func elevenMethod()  {
         // safeAreaLayoutGuide 安全局域
