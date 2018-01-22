@@ -84,6 +84,7 @@ class PodViewController: SuperViewController,UITableViewDelegate,UITableViewData
                 print(result["status"].boolValue)
                 print(result["data"].arrayValue[0]["name"].stringValue)
                 print(result["msg"].boolValue)
+                
             }
         }
     }
