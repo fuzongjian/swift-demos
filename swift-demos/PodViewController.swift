@@ -36,7 +36,8 @@ class PodViewController: SuperViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            method_alamofire()
+//            method_alamofire()
+              getMethod()
         case 1:
             print("RxSwift")
         case 2:
@@ -50,13 +51,13 @@ class PodViewController: SuperViewController,UITableViewDelegate,UITableViewData
         dic["name"] = "移动端"
         dic["des"] = "主要用原生语言开发移动端"
         print(dic)
-        request(path: PATH_POST, type: .post, parameters: dic) { (result, status) in
+        request(path: PATH_POST, type: .post, parameters: dic) { (result,jsonDic, status) in
             if status == true {
                 print(result)
             }
         }
     }
-    func getMethod(dic: [String:Any]) {
+    func getMethod() {
         // 第一种方法比较繁琐
         //        request(path: PATH_GET, type: .get, parameters: dic) { (result, status) in
         //            if status == true{
@@ -78,14 +79,15 @@ class PodViewController: SuperViewController,UITableViewDelegate,UITableViewData
 
         // get 方法
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        request(path: PATH_GET, type: .get, parameters: dic) { (result, status) in
+        request(path: PATH_GET, type: .get) { (json, jsonDic, status) in
             MBProgressHUD.hide(for: self.view, animated: true)
             if status == true {
-                print(result["status"].boolValue)
-                print(result["data"].arrayValue[0]["name"].stringValue)
-                print(result["msg"].boolValue)
+//                print(json["status"].boolValue)
+//                print(json["data"].arrayValue[0]["name"].stringValue)
+//                print(json["msg"].boolValue)
                 
             }
+            print(json.dictionaryObject!)
         }
     }
     override func didReceiveMemoryWarning() {

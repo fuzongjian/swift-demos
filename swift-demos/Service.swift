@@ -18,7 +18,8 @@ enum NetType{
     case get
     case post
 }
-func request(path: String,type: NetType,parameters : [String : Any]? = nil,completed :  @escaping (_ result : JSON,_ status : Bool) -> ()) {
+func request(path: String,type: NetType,parameters : [String : Any]? = nil,completed :  @escaping (_ json : JSON,_ jsonDic: Any ,_ status : Bool) -> ()) {
+    print(path)
     let method = type == .get ? HTTPMethod.get : HTTPMethod.post
     let header: HTTPHeaders = [
         "Accept": "application/json"
@@ -41,8 +42,8 @@ func request(path: String,type: NetType,parameters : [String : Any]? = nil,compl
 //        for obj in array{
 //            print(obj["name"].stringValue)
 //        }
-        print(JSON(result))
-        completed(JSON(result),true)
+        print(result)
+        completed(JSON(result),result,true)
     }
     
 }
