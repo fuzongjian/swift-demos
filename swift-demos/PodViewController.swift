@@ -87,6 +87,7 @@ class PodViewController: SuperViewController,UITableViewDelegate,UITableViewData
 //                print(json["msg"].boolValue)
                 
             }
+            // 模型转字典
             print(json.dictionaryObject!)
         }
     }
