@@ -13,7 +13,7 @@ import SwiftyJSON
 private let IP = "http://192.168.50.199:1010"
 public let PATH_GET = IP + "/department/findAll"
 public let PATH_POST = IP + "/department/add"
-
+// 设置请求方式
 enum NetType{
     case get
     case post
