@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: SuperViewController,UITableViewDataSource,UITableViewDelegate {
-    let array: [String] = ["基础部分","控件","三方库的使用","四种传值方式"]
+    let array: [String] = ["基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "Swift")
@@ -41,6 +41,8 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
             self.navigationController?.pushViewController(PodViewController(), animated: true)
         }else if indexPath.row == 3 {
             self.navigationController?.pushViewController(PassValueController(), animated: true)
+        }else if indexPath.row == 4{
+            self.navigationController?.pushViewController(AnimationController(), animated: true)
         }
         
     }
