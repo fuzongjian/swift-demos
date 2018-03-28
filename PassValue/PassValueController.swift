@@ -9,6 +9,7 @@
 import UIKit
 let NOTIFICATION = Notification.Name.init("notification_fuzongjian")
 class PassValueController: SuperViewController,delegateValue {
+    var count: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "传值")
@@ -23,8 +24,13 @@ class PassValueController: SuperViewController,delegateValue {
         // Do any additional setup after loading the view.
         // 注册通知
         NotificationCenter.default.addObserver(self, selector: #selector(receiveNotification(_:)), name: NOTIFICATION, object: nil)
+        
+        
+        count = 0
     }
     @objc func backBtnClicked(_sender: UIButton) {
+        
+        
         let delegateValue = DelegateViewController()
         delegateValue.delegate = self
         // 闭包传值
@@ -34,6 +40,13 @@ class PassValueController: SuperViewController,delegateValue {
         // 单例传值
         print(CommonManager.defaultInstance().name!)
         self.navigationController?.pushViewController(delegateValue, animated: true)
+    }
+    @objc func hello() {
+        count = count! + 1
+        if count! < 10  {
+            print("hello world")
+            self.perform(#selector(hello))
+        }
     }
     func postValueTo(str: String) {
         print("代理传值----"+str+" fuzongjian")
