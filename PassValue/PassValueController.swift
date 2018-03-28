@@ -32,11 +32,15 @@ class PassValueController: SuperViewController,delegateValue {
             print(str)
         }
         // 单例传值
-//        print(CommonManager.shared.name)
+        print(CommonManager.defaultInstance().name!)
         self.navigationController?.pushViewController(delegateValue, animated: true)
     }
     func postValueTo(str: String) {
         print("代理传值----"+str+" fuzongjian")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(CommonManager.defaultInstance().name!)
     }
     @objc private func receiveNotification(_ notification: Notification){
         guard let userinfo = notification.userInfo else {

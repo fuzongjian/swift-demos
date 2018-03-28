@@ -9,7 +9,13 @@
 import UIKit
 
 class CommonManager: NSObject {
-    static let shared = CommonManager()
-    private override init() {}
+    private static let shared = CommonManager()
     var name: String?
+    private override init() {
+        name = "fuzongjian"
+    }
+    // 提供类方法拿到对象
+    class func defaultInstance() -> CommonManager {
+        return shared
+    }
 }

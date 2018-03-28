@@ -39,7 +39,10 @@ class DelegateViewController: SuperViewController {
         // 发送通知
         NotificationCenter.default.post(name: NOTIFICATION, object: self, userInfo: ["key":"通知传值---value"])
         // 单例传值
-        CommonManager.shared.name = "单例传值----fuzongjian"
+        CommonManager.defaultInstance().name = "单例传值----fuzongjian"
+        
+        print(CommonManager.defaultInstance().name!)
+        
         
         self.navigationController?.popViewController(animated: true)
     }
