@@ -11,3 +11,4 @@
 - [枚举]()
 
 ### 提升
+- ~~[1. 传值方式](https://github.com/fuzongjian/swift-demos/blob/master/passValue.md)~~
