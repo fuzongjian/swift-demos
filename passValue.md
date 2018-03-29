@@ -21,6 +21,8 @@
 
     支持存储类型：
     Data、String、Number、Date、Array、Dictionary
+
   `注意`
+  
 
     如果需要存储plist文件不支持的类型，比如图片，可以先将其归档为Data类型，再进行存储
