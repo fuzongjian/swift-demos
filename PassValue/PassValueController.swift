@@ -21,10 +21,8 @@ class PassValueController: SuperViewController,delegateValue {
             make.width.height.equalTo(100)
             make.center.equalToSuperview()
         }
-        // Do any additional setup after loading the view.
         // 注册通知
         NotificationCenter.default.addObserver(self, selector: #selector(receiveNotification(_:)), name: NOTIFICATION, object: nil)
-        
         
         count = 0
     }
@@ -54,6 +52,10 @@ class PassValueController: SuperViewController,delegateValue {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(CommonManager.defaultInstance().name!)
+        guard let userDefault = UserDefaults.standard.value(forKey: "user_default") else {
+            return
+        }
+        Klog(userDefault)
     }
     @objc private func receiveNotification(_ notification: Notification){
         guard let userinfo = notification.userInfo else {

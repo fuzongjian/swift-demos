@@ -43,6 +43,10 @@ class DelegateViewController: SuperViewController {
         
         print(CommonManager.defaultInstance().name!)
         
+        // 偏好设置传值
+        UserDefaults.standard.set("偏好设置传值", forKey: "user_default")
+        UserDefaults.standard.synchronize()
+        
         
         self.navigationController?.popViewController(animated: true)
     }

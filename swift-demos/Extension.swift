@@ -20,7 +20,15 @@ func rgba(r: CGFloat,g: CGFloat,b: CGFloat,a: CGFloat) -> UIColor {
 func rgb(r: CGFloat,g: CGFloat,b: CGFloat) -> UIColor {
     return UIColor(red: r/225.0, green: g/225.0, blue: b/225.0, alpha: 1.0)  
 }
-
+func Klog(_ content: Any,file:String=#file,line:Int=#line){
+    #if DEBUG
+        print("\n--------------------------------debug-start-------------------------------")
+        let fileName = (file as NSString).lastPathComponent
+        print("\(fileName)----\(line)")
+        print(content)
+        print("--------------------------------debug-end-------------------------------")
+    #endif
+}
 
 
 public let SCREEN_WIDTH = UIScreen.main.bounds.size.width

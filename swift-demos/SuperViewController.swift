@@ -32,7 +32,9 @@ class SuperViewController: UIViewController {
             handler()
         }
     }
-
+    deinit {
+        
+    }
     /*
     // MARK: - Navigation
 
