@@ -60,11 +60,13 @@
 
   `eg`
 
-     // 存储
-     UserDefaults.standard.set("偏好设置传值", forKey: "user_default")
-     UserDefaults.standard.synchronize()
-     // 取值
-     guard let userDefault = UserDefaults.standard.value(forKey: "user_default") else {
+      {
+        // 存储
+        UserDefaults.standard.set("偏好设置传值", forKey: "user_default")
+        UserDefaults.standard.synchronize()
+        // 取值
+        guard let userDefault = UserDefaults.standard.value(forKey: "user_default") else {
             return
-     }
-     print(userDefault)
+        }
+        print(userDefault)
+      }
