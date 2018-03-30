@@ -24,6 +24,7 @@
 		9B169AA1200759930017E7ED /* CollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169AA0200759930017E7ED /* CollectionController.swift */; };
 		9B169AA320075F950017E7ED /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169AA220075F950017E7ED /* CustomCollectionCell.swift */; };
 		9B47D28E206799E1006EBF0E /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B47D28D206799E0006EBF0E /* AnimationController.swift */; };
+		9B7215B5206E098600480E06 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7215B4206E098600480E06 /* TimerViewController.swift */; };
 		9BB04402200DEAEA009641A5 /* PodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04401200DEAEA009641A5 /* PodViewController.swift */; };
 		9BB04406200DEF04009641A5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04405200DEF04009641A5 /* Service.swift */; };
 		9BB0440D200F3AE4009641A5 /* SnapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0440C200F3AE4009641A5 /* SnapKitController.swift */; };
@@ -73,6 +74,7 @@
 		9B169AA0200759930017E7ED /* CollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionController.swift; sourceTree = "<group>"; };
 		9B169AA220075F950017E7ED /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		9B47D28D206799E0006EBF0E /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		9B7215B4206E098600480E06 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		9BB04401200DEAEA009641A5 /* PodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodViewController.swift; sourceTree = "<group>"; };
 		9BB04405200DEF04009641A5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9BB04408200F1C51009641A5 /* swift-demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-demos-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				9B47D28C206799BC006EBF0E /* AnimationController */,
 				9B7215B2206CF49100480E06 /* ThirdPodController */,
 				9BC3F9372063B0B30096BFB6 /* PassValue */,
+				9B7215B3206E097300480E06 /* TimerController */,
 				9B169A69200499130017E7ED /* Main.storyboard */,
 				9B169A6C200499130017E7ED /* Assets.xcassets */,
 				9B169A6E200499130017E7ED /* LaunchScreen.storyboard */,
@@ -225,6 +228,14 @@
 				9BB0440C200F3AE4009641A5 /* SnapKitController.swift */,
 			);
 			path = ThirdPodController;
+			sourceTree = SOURCE_ROOT;
+		};
+		9B7215B3206E097300480E06 /* TimerController */ = {
+			isa = PBXGroup;
+			children = (
+				9B7215B4206E098600480E06 /* TimerViewController.swift */,
+			);
+			path = TimerController;
 			sourceTree = SOURCE_ROOT;
 		};
 		9BC3F9372063B0B30096BFB6 /* PassValue */ = {
@@ -450,6 +461,7 @@
 				9BC3F93D2063B4370096BFB6 /* DelegateViewController.swift in Sources */,
 				9B169A942006051F0017E7ED /* SuperViewController.swift in Sources */,
 				9BB04406200DEF04009641A5 /* Service.swift in Sources */,
+				9B7215B5206E098600480E06 /* TimerViewController.swift in Sources */,
 				9B169A9D2007426E0017E7ED /* Extension.swift in Sources */,
 				9B169A9F200750800017E7ED /* SearchBarController.swift in Sources */,
 				9B169AA1200759930017E7ED /* CollectionController.swift in Sources */,
