@@ -27,6 +27,8 @@ class TimerViewController: SuperViewController,UITableViewDelegate,UITableViewDa
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
             // 当开始滑动的时候，runloop的mode由原来的Default切换到Event Tracking模式
             
+            
+            
             // https://www.jianshu.com/p/15db5e5f2c49
             RunLoop.current.add(timer, forMode: .commonModes)
             self.startTimer()
