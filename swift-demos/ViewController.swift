@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: SuperViewController,UITableViewDataSource,UITableViewDelegate {
     let array: [String] = ["基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧","Timer",
-                           "Swift-Block-OC"]
+                           "Swift-Block-OC","属性介绍"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "Swift")
@@ -52,6 +52,8 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
                 Klog(value)
             })
             self.navigationController?.pushViewController(blockController, animated: true)
+        }else if indexPath.row == 7{
+            self.navigationController?.pushViewController(PropertyController(), animated: true)
         }
         
     }

@@ -33,6 +33,9 @@
 		9BC3F9412063C6E30096BFB6 /* CommonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC3F9402063C6E30096BFB6 /* CommonManager.swift */; };
 		9BE3D48F2071C3F3007AB9CD /* SwiftBlockOcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D48E2071C3F3007AB9CD /* SwiftBlockOcController.swift */; };
 		9BE3D4942071C442007AB9CD /* OcBlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4932071C442007AB9CD /* OcBlockController.m */; };
+		9BE3D4972071FB99007AB9CD /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4962071FB99007AB9CD /* Person.m */; };
+		9BE3D49B207218E2007AB9CD /* PropertyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D49A207218E2007AB9CD /* PropertyController.m */; };
+		9BE3D49E20722CF7007AB9CD /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D49D20722CF7007AB9CD /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,12 @@
 		9BE3D48E2071C3F3007AB9CD /* SwiftBlockOcController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBlockOcController.swift; sourceTree = "<group>"; };
 		9BE3D4922071C442007AB9CD /* OcBlockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OcBlockController.h; sourceTree = "<group>"; };
 		9BE3D4932071C442007AB9CD /* OcBlockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OcBlockController.m; sourceTree = "<group>"; };
+		9BE3D4952071FB99007AB9CD /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		9BE3D4962071FB99007AB9CD /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		9BE3D499207218E2007AB9CD /* PropertyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyController.h; sourceTree = "<group>"; };
+		9BE3D49A207218E2007AB9CD /* PropertyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyController.m; sourceTree = "<group>"; };
+		9BE3D49C20722CF7007AB9CD /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		9BE3D49D20722CF7007AB9CD /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		CBC8CCD33000AD91000B2767 /* Pods_swift_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2411E5C0D2AFF1686B2B799 /* Pods-swift-demos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-demos.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-demos/Pods-swift-demos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +178,7 @@
 				9BC3F9372063B0B30096BFB6 /* PassValue */,
 				9B7215B3206E097300480E06 /* TimerController */,
 				9BE3D48D2071C3D0007AB9CD /* Swift-block-OC */,
+				9BE3D498207218C3007AB9CD /* PropertyController */,
 				9B169A69200499130017E7ED /* Main.storyboard */,
 				9B169A6C200499130017E7ED /* Assets.xcassets */,
 				9B169A6E200499130017E7ED /* LaunchScreen.storyboard */,
@@ -259,8 +269,21 @@
 				9BE3D48E2071C3F3007AB9CD /* SwiftBlockOcController.swift */,
 				9BE3D4922071C442007AB9CD /* OcBlockController.h */,
 				9BE3D4932071C442007AB9CD /* OcBlockController.m */,
+				9BE3D4952071FB99007AB9CD /* Person.h */,
+				9BE3D4962071FB99007AB9CD /* Person.m */,
 			);
 			path = "Swift-block-OC";
+			sourceTree = SOURCE_ROOT;
+		};
+		9BE3D498207218C3007AB9CD /* PropertyController */ = {
+			isa = PBXGroup;
+			children = (
+				9BE3D499207218E2007AB9CD /* PropertyController.h */,
+				9BE3D49A207218E2007AB9CD /* PropertyController.m */,
+				9BE3D49C20722CF7007AB9CD /* User.h */,
+				9BE3D49D20722CF7007AB9CD /* User.m */,
+			);
+			path = PropertyController;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -476,12 +499,15 @@
 				9B169A96200605810017E7ED /* BaseViewController.swift in Sources */,
 				9BC3F93D2063B4370096BFB6 /* DelegateViewController.swift in Sources */,
 				9B169A942006051F0017E7ED /* SuperViewController.swift in Sources */,
+				9BE3D4972071FB99007AB9CD /* Person.m in Sources */,
 				9BE3D48F2071C3F3007AB9CD /* SwiftBlockOcController.swift in Sources */,
 				9BB04406200DEF04009641A5 /* Service.swift in Sources */,
+				9BE3D49E20722CF7007AB9CD /* User.m in Sources */,
 				9BE3D4942071C442007AB9CD /* OcBlockController.m in Sources */,
 				9B7215B5206E098600480E06 /* TimerViewController.swift in Sources */,
 				9B169A9D2007426E0017E7ED /* Extension.swift in Sources */,
 				9B169A9F200750800017E7ED /* SearchBarController.swift in Sources */,
+				9BE3D49B207218E2007AB9CD /* PropertyController.m in Sources */,
 				9B169AA1200759930017E7ED /* CollectionController.swift in Sources */,
 				9B169A982006663D0017E7ED /* AdvanceViewController.swift in Sources */,
 				9B169A66200499130017E7ED /* AppDelegate.swift in Sources */,

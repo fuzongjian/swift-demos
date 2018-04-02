@@ -75,6 +75,9 @@ class SwiftBlockOcController: SuperViewController {
         self.navigationController?.pushViewController(ocController, animated: true)
     }
     @objc func backBtnClicked(_sender: UIButton) {
+        guard (self.valueBlock != nil) else {
+            return
+        }
         self.valueBlock!("hello fuzongjian")
         self.navigationController?.popViewController(animated: true)
     }

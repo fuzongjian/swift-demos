@@ -7,7 +7,7 @@
 //
 
 #import "OcBlockController.h"
-
+#import "Person.h"
 @interface OcBlockController ()
 @property (nonatomic,copy) returnBlock blockValue;
 @end
@@ -34,6 +34,16 @@
     [bakcBtn addTarget:self action:@selector(backBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bakcBtn];
     
+    //
+    [self testBlock];
+}
+- (void)testBlock{
+    Person * person = [[Person alloc] init];
+    __weak Person * weakPerson = person;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [weakPerson test];
+        NSLog(@"%@",weakPerson);
+    });
 }
 // 界面传值
 - (void)getReturnValue:(returnBlock)block{
@@ -54,7 +64,9 @@
     }
     [self.navigationController popViewControllerAnimated:true];
 }
-
+- (void)dealloc{
+    NSLog(@"%s",__func__);
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
