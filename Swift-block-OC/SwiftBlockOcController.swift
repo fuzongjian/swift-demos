@@ -7,8 +7,9 @@
 //
 
 import UIKit
+typealias changeValue = (String) ->()
 class SwiftBlockOcController: SuperViewController {
-
+    var valueBlock: changeValue?
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -26,6 +27,17 @@ class SwiftBlockOcController: SuperViewController {
             make.right.equalTo(-20)
             make.height.equalTo(40)
         }
+        let backBtn = UIButton(type: .system)
+        backBtn.setTitle("返回", for: .normal)
+        backBtn.addTarget(self, action: #selector(backBtnClicked(_sender:)), for: .touchUpInside)
+        view.addSubview(backBtn)
+        backBtn.snp.makeConstraints { (make) in
+            make.top.equalTo(swiftBtn.snp.bottom).offset(20)
+            make.left.equalTo(20)
+            make.right.equalTo(-20)
+            make.height.equalTo(40)
+        }
+        
         
         let returnValue = noPramaNoReturn(count: 10) {
             Klog("1---hello blcok")
@@ -50,15 +62,29 @@ class SwiftBlockOcController: SuperViewController {
         completed()
         return sum
     }
+    // 界面传值
+    func getValueBlock(block: @escaping changeValue) {
+        self.valueBlock = block
+    }
     @objc func swiftBtnClicked(_ sender: UIButton) {
         Klog("hello world")
-        self.navigationController?.pushViewController(OcBlockController(), animated: true)
+        let ocController = OcBlockController()
+        ocController.getReturnValue { (value) in
+            Klog(value!)
+        }
+        self.navigationController?.pushViewController(ocController, animated: true)
+    }
+    @objc func backBtnClicked(_sender: UIButton) {
+        self.valueBlock!("hello fuzongjian")
+        self.navigationController?.popViewController(animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    deinit {
+        Klog("dealloc")
+    }
 
     /*
     // MARK: - Navigation

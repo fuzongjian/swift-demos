@@ -7,7 +7,7 @@
 //
 
 #import "OcBlockController.h"
-typedef void(^returnBlock)(NSString * user);
+
 @interface OcBlockController ()
 @property (nonatomic,copy) returnBlock blockValue;
 @end
@@ -27,9 +27,17 @@ typedef void(^returnBlock)(NSString * user);
     [self paraReturn:@"fuzongjian" completed:^(int value1, int value2) {
         NSLog(@"2---a=%d-b=%d",value1,value2);
     }];
+    
+    UIButton * bakcBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [bakcBtn setTitle:@"返回" forState:UIControlStateNormal];
+    bakcBtn.frame = CGRectMake(20, 100, 200, 40);
+    [bakcBtn addTarget:self action:@selector(backBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:bakcBtn];
+    
 }
-- (void)blcokHelloComplete:(returnBlock)complete{
-    complete = self.blockValue;
+// 界面传值
+- (void)getReturnValue:(returnBlock)block{
+    self.blockValue = block;
 }
 - (void)noParaNoReturn:(NSString *)name completed:(void(^)(void))complete{
     NSLog(@"1---name=%@",name);
@@ -39,6 +47,14 @@ typedef void(^returnBlock)(NSString * user);
     NSLog(@"2---name=%@",name);
     completed(10,20);
 }
+- (void)backBtnClicked:(UIButton *)sender{
+//    self.blockValue(@"hello oc block");
+    if (self.blockValue) {
+        self.blockValue(@"hello oc block");
+    }
+    [self.navigationController popViewControllerAnimated:true];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

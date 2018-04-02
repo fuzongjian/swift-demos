@@ -47,7 +47,11 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
         }else if indexPath.row == 5{
             self.navigationController?.pushViewController(TimerViewController(), animated: true)
         }else if indexPath.row == 6{
-            self.navigationController?.pushViewController(SwiftBlockOcController(), animated: true)
+            let blockController = SwiftBlockOcController()
+            blockController.getValueBlock(block: { (value) in
+                Klog(value)
+            })
+            self.navigationController?.pushViewController(blockController, animated: true)
         }
         
     }

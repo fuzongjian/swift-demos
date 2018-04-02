@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void(^returnBlock)(NSString * user);
 @interface OcBlockController : UIViewController
 
+- (void)getReturnValue:(returnBlock)block;
 @end
