@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: SuperViewController,UITableViewDataSource,UITableViewDelegate {
-    let array: [String] = ["基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧","Timer"]
+    let array: [String] = ["基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧","Timer",
+                           "Swift-Block-OC"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "Swift")
@@ -45,6 +46,8 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
             self.navigationController?.pushViewController(AnimationController(), animated: true)
         }else if indexPath.row == 5{
             self.navigationController?.pushViewController(TimerViewController(), animated: true)
+        }else if indexPath.row == 6{
+            self.navigationController?.pushViewController(SwiftBlockOcController(), animated: true)
         }
         
     }

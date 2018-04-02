@@ -25,14 +25,14 @@ class TimerViewController: SuperViewController,UITableViewDelegate,UITableViewDa
             make.top.bottom.right.left.equalToSuperview()
         }
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
-            // 当开始滑动的时候，runloop的mode由原来的Default切换到Event Tracking模式
-            
-            
-            
-            // https://www.jianshu.com/p/15db5e5f2c49
+//             当开始滑动的时候，runloop的mode由原来的Default切换到Event Tracking模式
+//             所以在原来的模式就会被关闭
+//             方法   将timer加入到NSRunloopCommonModes中
             RunLoop.current.add(timer, forMode: .commonModes)
             self.startTimer()
         }
+        
+
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
