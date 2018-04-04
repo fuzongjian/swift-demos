@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: SuperViewController,UITableViewDataSource,UITableViewDelegate {
     let array: [String] = ["基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧","Timer",
-                           "Swift-Block-OC","属性介绍","事件响应机制","KVO与KVC"]
+                           "Swift-Block-OC","属性介绍","事件响应机制","KVO与KVC","高性能圆角"]
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "Swift")
@@ -58,6 +58,8 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
             self.navigationController?.pushViewController(ResponseController(), animated: true)
         }else if indexPath.row == 9{
             self.navigationController?.pushViewController(KVCKVOController(), animated: true)
+        }else if indexPath.row == 10{
+            self.navigationController?.pushViewController(CornerController(), animated: true)
         }
         
     }

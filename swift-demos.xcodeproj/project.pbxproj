@@ -38,6 +38,8 @@
 		9BE3D49E20722CF7007AB9CD /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D49D20722CF7007AB9CD /* User.m */; };
 		9BE3D4A120730D56007AB9CD /* ResponseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4A020730D56007AB9CD /* ResponseController.swift */; };
 		9BE3D4A420738495007AB9CD /* KVCKVOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4A320738495007AB9CD /* KVCKVOController.swift */; };
+		9BE3D4A72074564C007AB9CD /* CornerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4A62074564C007AB9CD /* CornerController.swift */; };
+		9BE3D4A920746616007AB9CD /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4A820746616007AB9CD /* ImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		9BE3D49D20722CF7007AB9CD /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		9BE3D4A020730D56007AB9CD /* ResponseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseController.swift; sourceTree = "<group>"; };
 		9BE3D4A320738495007AB9CD /* KVCKVOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVCKVOController.swift; sourceTree = "<group>"; };
+		9BE3D4A62074564C007AB9CD /* CornerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerController.swift; sourceTree = "<group>"; };
+		9BE3D4A820746616007AB9CD /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		CBC8CCD33000AD91000B2767 /* Pods_swift_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2411E5C0D2AFF1686B2B799 /* Pods-swift-demos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-demos.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-demos/Pods-swift-demos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +189,7 @@
 				9BE3D498207218C3007AB9CD /* PropertyController */,
 				9BE3D49F20730D3C007AB9CD /* ResponseController */,
 				9BE3D4A220738484007AB9CD /* KVCKVOController */,
+				9BE3D4A52074563B007AB9CD /* CornerController */,
 				9B169A69200499130017E7ED /* Main.storyboard */,
 				9B169A6C200499130017E7ED /* Assets.xcassets */,
 				9B169A6E200499130017E7ED /* LaunchScreen.storyboard */,
@@ -306,6 +311,15 @@
 				9BE3D4A320738495007AB9CD /* KVCKVOController.swift */,
 			);
 			path = KVCKVOController;
+			sourceTree = SOURCE_ROOT;
+		};
+		9BE3D4A52074563B007AB9CD /* CornerController */ = {
+			isa = PBXGroup;
+			children = (
+				9BE3D4A62074564C007AB9CD /* CornerController.swift */,
+				9BE3D4A820746616007AB9CD /* ImageExtension.swift */,
+			);
+			path = CornerController;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -528,12 +542,14 @@
 				9BE3D49E20722CF7007AB9CD /* User.m in Sources */,
 				9BE3D4942071C442007AB9CD /* OcBlockController.m in Sources */,
 				9BE3D4A120730D56007AB9CD /* ResponseController.swift in Sources */,
+				9BE3D4A920746616007AB9CD /* ImageExtension.swift in Sources */,
 				9B7215B5206E098600480E06 /* TimerViewController.swift in Sources */,
 				9B169A9D2007426E0017E7ED /* Extension.swift in Sources */,
 				9B169A9F200750800017E7ED /* SearchBarController.swift in Sources */,
 				9BE3D49B207218E2007AB9CD /* PropertyController.m in Sources */,
 				9B169AA1200759930017E7ED /* CollectionController.swift in Sources */,
 				9B169A982006663D0017E7ED /* AdvanceViewController.swift in Sources */,
+				9BE3D4A72074564C007AB9CD /* CornerController.swift in Sources */,
 				9B169A66200499130017E7ED /* AppDelegate.swift in Sources */,
 				9BC3F93B2063B1510096BFB6 /* PassValueController.swift in Sources */,
 				9B169AA320075F950017E7ED /* CustomCollectionCell.swift in Sources */,
