@@ -13,7 +13,7 @@ class CategoryExtentsionController: SuperViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let person = Person()
+       
         
         // Do any additional setup after loading the view.
     }
