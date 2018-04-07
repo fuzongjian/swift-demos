@@ -19,3 +19,4 @@
 ### 博客学习
 - [YYKit作者——郭曜源](https://blog.ibireme.com)
 - [面试题学习](https://zhuanlan.zhihu.com/c_154646059)
+- [唐巧——InfoQ](http://www.infoq.com/cn/profile/唐巧)
