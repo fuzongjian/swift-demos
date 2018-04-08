@@ -41,6 +41,7 @@
 		9BE3D4A72074564C007AB9CD /* CornerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4A62074564C007AB9CD /* CornerController.swift */; };
 		9BE3D4A920746616007AB9CD /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4A820746616007AB9CD /* ImageExtension.swift */; };
 		9BE3D4B1207911E3007AB9CD /* CategoryExtentsionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D4B0207911E3007AB9CD /* CategoryExtentsionController.swift */; };
+		9BE3D501207A0D92007AB9CD /* ThreadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3D500207A0D92007AB9CD /* ThreadController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		9BE3D4A62074564C007AB9CD /* CornerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerController.swift; sourceTree = "<group>"; };
 		9BE3D4A820746616007AB9CD /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		9BE3D4B0207911E3007AB9CD /* CategoryExtentsionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExtentsionController.swift; sourceTree = "<group>"; };
+		9BE3D500207A0D92007AB9CD /* ThreadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadController.swift; sourceTree = "<group>"; };
 		CBC8CCD33000AD91000B2767 /* Pods_swift_demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2411E5C0D2AFF1686B2B799 /* Pods-swift-demos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-demos.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-demos/Pods-swift-demos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +195,7 @@
 				9BE3D4A220738484007AB9CD /* KVCKVOController */,
 				9BE3D4A52074563B007AB9CD /* CornerController */,
 				9BE3D4AF207911C5007AB9CD /* CategoryExtention */,
+				9BE3D4FC207A0D66007AB9CD /* ThreadController */,
 				9B169A69200499130017E7ED /* Main.storyboard */,
 				9B169A6C200499130017E7ED /* Assets.xcassets */,
 				9B169A6E200499130017E7ED /* LaunchScreen.storyboard */,
@@ -331,6 +334,14 @@
 				9BE3D4B0207911E3007AB9CD /* CategoryExtentsionController.swift */,
 			);
 			path = CategoryExtention;
+			sourceTree = SOURCE_ROOT;
+		};
+		9BE3D4FC207A0D66007AB9CD /* ThreadController */ = {
+			isa = PBXGroup;
+			children = (
+				9BE3D500207A0D92007AB9CD /* ThreadController.swift */,
+			);
+			path = ThreadController;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -545,6 +556,7 @@
 				9B169A68200499130017E7ED /* ViewController.swift in Sources */,
 				9B169A96200605810017E7ED /* BaseViewController.swift in Sources */,
 				9BC3F93D2063B4370096BFB6 /* DelegateViewController.swift in Sources */,
+				9BE3D501207A0D92007AB9CD /* ThreadController.swift in Sources */,
 				9B169A942006051F0017E7ED /* SuperViewController.swift in Sources */,
 				9BE3D4972071FB99007AB9CD /* Person.m in Sources */,
 				9BE3D48F2071C3F3007AB9CD /* SwiftBlockOcController.swift in Sources */,

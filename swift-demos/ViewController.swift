@@ -9,8 +9,11 @@
 import UIKit
 
 class ViewController: SuperViewController,UITableViewDataSource,UITableViewDelegate {
-    let array: [String] = ["基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧","Timer",
-                           "Swift-Block-OC","属性介绍","事件响应机制","KVO与KVC","高性能圆角"]
+    let array: [String] = [
+        "基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧","Timer",
+        "Swift-Block-OC","属性介绍","事件响应机制","KVO与KVC","高性能圆角",
+        "多线程"
+                           ]
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "Swift")
@@ -60,6 +63,8 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
             self.navigationController?.pushViewController(KVCKVOController(), animated: true)
         }else if indexPath.row == 10{
             self.navigationController?.pushViewController(CornerController(), animated: true)
+        }else if indexPath.row == 11 {
+            self.navigationController?.pushViewController(ThreadController(), animated: true)
         }
         
     }
