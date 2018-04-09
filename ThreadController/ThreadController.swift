@@ -18,23 +18,94 @@ class ThreadController: SuperViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        threadMethod()
-        synchronizeMethod()
         // Do any additional setup after loading the view.
     }
     func configUI() -> Void {
         setCustomTitle(title: "多线程")
+        let thread = UIButton(type: .system)
+        thread.setTitle("Thread", for: .normal)
+        let queue = UIButton(type: .system)
+        queue.setTitle("Queue", for: .normal)
+        let gcd = UIButton(type: .system)
+        gcd.setTitle("GCD", for: .normal)
+        view.addSubview(thread)
+        view.addSubview(queue)
+        view.addSubview(gcd)
+        thread.snp.makeConstraints { (make) in
+            make.top.equalTo(100)
+            make.width.equalTo(100)
+            make.height.equalTo(40)
+            make.centerX.equalToSuperview()
+        }
+        thread.addTarget(self, action: #selector(thread_method(_:)), for: .touchUpInside)
+        queue.snp.makeConstraints { (make) in
+            make.top.equalTo(thread.snp.bottom).offset(20)
+            make.width.height.equalTo(thread)
+            make.centerX.equalTo(thread)
+        }
+        queue.addTarget(self, action: #selector(queue_method(_:)), for: .touchUpInside)
+        gcd.snp.makeConstraints { (make) in
+            make.top.equalTo(queue.snp.bottom).offset(20)
+            make.size.equalTo(thread)
+            make.centerX.equalTo(thread)
+        }
+        gcd.addTarget(self, action: #selector(gcd_method(_:)), for: .touchUpInside)
+    }
+    @objc func gcd_method(_ sender: UIButton) -> Void {
+        
+    }
+    
+    @objc func queue_method(_ sender: UIButton) -> Void {
+        operation_queue()
+    }
+    /*   OperationQueue   BlockOperation
+     *   A->B->C
+     */
+    func operation_queue() -> Void {
+        let queue = OperationQueue()
+        let a = BlockOperation {
+            Klog("a---a\(Thread.current)")
+            
+        }
+        let b = BlockOperation {
+            Klog("b---b\(Thread.current)")
+        }
+        let c = BlockOperation {
+            Klog("c---c\(Thread.current)")
+        }
+        // 添加依赖
+        b.addDependency(a) // 如果不添加这条，a与b先后不分
+        c.addDependency(a)
+        c.addDependency(b)
+        // 执行操作
+        queue.addOperation(a)
+        queue.addOperation(b)
+        queue.addOperation(c)
+    }
+    @objc func thread_method(_ sender: UIButton) -> Void {
+        threadMethod()
+        synchronizeMethod()
     }
     /*     NSThread
      *      自己管理线程的生命周期和线程同步
      */
     func threadMethod() -> Void {
-        // 类方法
+        // 类方法，创建之后即调用
         Thread.detachNewThreadSelector(#selector(threadRun), toTarget: self, with: nil)
         // 实例方法
-        let thread = Thread(target: self, selector: #selector(ThreadController.threadRun), object: nil)
-        thread.name = "fuzongjian"
-        thread.start()
+        if #available(iOS 10.0, *){
+            let thread = Thread(block: {
+                Klog(Thread.current)
+            })
+            thread.name = "ios10"
+            thread.start()
+        }else{
+            let thread = Thread(target: self, selector: #selector(ThreadController.threadRun), object: nil)
+            thread.name = "fuzongjian"
+            thread.start()
+        }
+        
+        
     }
     // 线程同步
     func synchronizeMethod() -> Void {
