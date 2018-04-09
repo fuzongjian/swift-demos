@@ -65,7 +65,13 @@ class ThreadController: SuperViewController {
         let queue = OperationQueue()
         let a = BlockOperation {
             Klog("a---a\(Thread.current)")
-            
+            DispatchQueue.main.async {
+                Klog(Thread.current)
+            }
+        }
+        // 可以给每个任务结束之后的回调
+        a.completionBlock = { () -> Void in
+            Klog("operation finished")
         }
         let b = BlockOperation {
             Klog("b---b\(Thread.current)")
@@ -81,6 +87,14 @@ class ThreadController: SuperViewController {
         queue.addOperation(a)
         queue.addOperation(b)
         queue.addOperation(c)
+        
+        // 设置并发数 默认没有限制
+        queue.maxConcurrentOperationCount = 5
+        
+        // 取消所有线程操作
+        //queue.cancelAllOperations()
+        
+        
     }
     @objc func thread_method(_ sender: UIButton) -> Void {
         threadMethod()
