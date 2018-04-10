@@ -62,6 +62,10 @@ class ThreadController: SuperViewController {
      *  1、可用于多核的并行运算
      *  2、自动利用更多的CPU内核
      *  3、自动管理线程的生命周期（创建、调度、销毁）
+     *   -------   内部实现   --------
+     *  1、iOS和OS X的核心是XNU内核，GCD是基于CNU内核实现
+     *  2、GCD的API全部在libdispatch库中
+     *  3、GCD的底层实现主要有Dispatch Queue（管理block）和Dispatch Source（处理事件）
      */
     @objc func gcd_method(_ sender: UIButton) -> Void {
         //        group_method()

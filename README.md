@@ -13,7 +13,7 @@
 ### 提升
 - ~~[1. 传值方式](https://github.com/fuzongjian/swift-demos/blob/master/passValue.md)~~
 
-
+- ~~[2. TCP/IP、Socket、FTP、UDP、HTTP各种协议解析](https://github.com/fuzongjian/swift-demos/blob/master/protocol.md)~~
 
 
 ### 博客学习

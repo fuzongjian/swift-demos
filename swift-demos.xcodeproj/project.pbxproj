@@ -25,6 +25,7 @@
 		9B169AA320075F950017E7ED /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169AA220075F950017E7ED /* CustomCollectionCell.swift */; };
 		9B47D28E206799E1006EBF0E /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B47D28D206799E0006EBF0E /* AnimationController.swift */; };
 		9B7215B5206E098600480E06 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7215B4206E098600480E06 /* TimerViewController.swift */; };
+		9B95F8CC207C947C00D3B0B2 /* TCPIPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95F8CB207C947C00D3B0B2 /* TCPIPController.swift */; };
 		9BB04402200DEAEA009641A5 /* PodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04401200DEAEA009641A5 /* PodViewController.swift */; };
 		9BB04406200DEF04009641A5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04405200DEF04009641A5 /* Service.swift */; };
 		9BB0440D200F3AE4009641A5 /* SnapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0440C200F3AE4009641A5 /* SnapKitController.swift */; };
@@ -86,6 +87,7 @@
 		9B169AA220075F950017E7ED /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		9B47D28D206799E0006EBF0E /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
 		9B7215B4206E098600480E06 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		9B95F8CB207C947C00D3B0B2 /* TCPIPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPIPController.swift; sourceTree = "<group>"; };
 		9BB04401200DEAEA009641A5 /* PodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodViewController.swift; sourceTree = "<group>"; };
 		9BB04405200DEF04009641A5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9BB04408200F1C51009641A5 /* swift-demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-demos-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				9BE3D4A52074563B007AB9CD /* CornerController */,
 				9BE3D4AF207911C5007AB9CD /* CategoryExtention */,
 				9BE3D4FC207A0D66007AB9CD /* ThreadController */,
+				9B95F8CA207C946A00D3B0B2 /* TCPIPController */,
 				9B169A69200499130017E7ED /* Main.storyboard */,
 				9B169A6C200499130017E7ED /* Assets.xcassets */,
 				9B169A6E200499130017E7ED /* LaunchScreen.storyboard */,
@@ -269,6 +272,14 @@
 				9B7215B4206E098600480E06 /* TimerViewController.swift */,
 			);
 			path = TimerController;
+			sourceTree = SOURCE_ROOT;
+		};
+		9B95F8CA207C946A00D3B0B2 /* TCPIPController */ = {
+			isa = PBXGroup;
+			children = (
+				9B95F8CB207C947C00D3B0B2 /* TCPIPController.swift */,
+			);
+			path = TCPIPController;
 			sourceTree = SOURCE_ROOT;
 		};
 		9BC3F9372063B0B30096BFB6 /* PassValue */ = {
@@ -556,6 +567,7 @@
 				9B169A68200499130017E7ED /* ViewController.swift in Sources */,
 				9B169A96200605810017E7ED /* BaseViewController.swift in Sources */,
 				9BC3F93D2063B4370096BFB6 /* DelegateViewController.swift in Sources */,
+				9B95F8CC207C947C00D3B0B2 /* TCPIPController.swift in Sources */,
 				9BE3D501207A0D92007AB9CD /* ThreadController.swift in Sources */,
 				9B169A942006051F0017E7ED /* SuperViewController.swift in Sources */,
 				9BE3D4972071FB99007AB9CD /* Person.m in Sources */,

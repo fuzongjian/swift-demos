@@ -12,7 +12,7 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
     let array: [String] = [
         "基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧","Timer",
         "Swift-Block-OC","属性介绍","事件响应机制","KVO与KVC","高性能圆角",
-        "多线程"
+        "多线程","TCP/IP、Socket"
                            ]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +65,17 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
             self.navigationController?.pushViewController(CornerController(), animated: true)
         }else if indexPath.row == 11 {
             self.navigationController?.pushViewController(ThreadController(), animated: true)
+        }else if indexPath.row == 12{
+            
+            self.navigationController?.pushViewController(TCPIPController(), animated: true)
+            return
+            
+            //获取命名空间，在info.plist文件里就是Executable file
+            let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+            //拼接成固定格式
+            let controller:AnyClass = NSClassFromString(nameSpace + "." + "CornerController")!
+            //创建对象
+            let viewController = (controller as! UIViewController.Type).init()
         }
         
     }
