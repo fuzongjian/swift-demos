@@ -24,7 +24,9 @@ func Klog(_ content: Any,file:String=#file,line:Int=#line){
     #if DEBUG
         print("\n--------------------------------debug-start-------------------------------")
         let fileName = (file as NSString).lastPathComponent
-        print("\(fileName)----\(line)")
+        let dformatter = DateFormatter()
+        dformatter.dateFormat = "yyyy年MM月dd日 HH:mm:ss"
+        print("\(fileName)----\(line)---\(dformatter.string(from: Date()))")
         print(content)
         print("--------------------------------debug-end-------------------------------")
     #endif
