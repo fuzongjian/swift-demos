@@ -3,7 +3,7 @@
 - [参考文档1](https://www.jianshu.com/p/2d3c8e084205)
 - [参考文档2](https://www.cnblogs.com/kenshincui/p/6823841.html)
 - [参考文档3](https://www.jianshu.com/p/b9426458fcf6)
-- ** [参考文档4](http://www.cocoachina.com/ios/20150601/11970.html) **
+- **[参考文档4](http://www.cocoachina.com/ios/20150601/11970.html)**
 
 `强烈推荐参考文档4`
 
@@ -58,14 +58,16 @@
 
 > **CFRunLoopObserverRef**
   >> - CFRunLoopObserverRef 是观察者，每个 Observer 都包含了一个回调（函数指针），当 RunLoop 的状态发生变化时，观察者就能通过回调接受到这个变化.
-  >>        typedef CF_OPTIONS(CFOptionFlags CFRunLoopActivity) {
-          kCFRunLoopEntry         = (1UL << 0), // 即将进入Loop
-          kCFRunLoopBeforeTimers  = (1UL << 1), // 即将处理 Timer
-          kCFRunLoopBeforeSources = (1UL << 2), // 即将处理 Source
-          kCFRunLoopBeforeWaiting = (1UL << 5), // 即将进入休眠
-          kCFRunLoopAfterWaiting  = (1UL << 6), // 刚从休眠中唤醒
-          kCFRunLoopExit          = (1UL << 7), // 即将退出Loop
-      };
+  ```
+    typedef CF_OPTIONS(CFOptionFlags CFRunLoopActivity) {
+       kCFRunLoopEntry         = (1UL << 0), // 即将进入Loop
+       kCFRunLoopBeforeTimers  = (1UL << 1), // 即将处理 Timer
+       kCFRunLoopBeforeSources = (1UL << 2), // 即将处理 Source
+       kCFRunLoopBeforeWaiting = (1UL << 5), // 即将进入休眠
+       kCFRunLoopAfterWaiting  = (1UL << 6), // 刚从休眠中唤醒
+       kCFRunLoopExit          = (1UL << 7), // 即将退出Loop
+     };
+  ```
 
 > ### 注意:
   >> - 上面的Source/Timer/Observer被统称为mode item，一个item可以被同时加入多个mode
