@@ -15,4 +15,10 @@
 
 | 五个类的关系如下图 |
 |:---------------:|
-|![百度](/img/runloop.png)|
+|![关系](/img/runloop.png)|
+
+
+| RunLoop的内部逻辑 |
+|:--------:|
+|![内部逻辑](/img/runloop-main.png)|
+|![文字描述](/img/runloop-des.png)|
