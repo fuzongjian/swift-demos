@@ -279,8 +279,6 @@ class ThreadController: SuperViewController {
             thread.name = "fuzongjian"
             thread.start()
         }
-        
-        
     }
     // 线程同步
     func synchronizeMethod() -> Void {
