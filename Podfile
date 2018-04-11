@@ -8,4 +8,5 @@ target 'swift-demos’ do
     pod 'RxSwift', '~> 4.0.0'  # ReactiveX
     pod 'SnapKit', '~> 4.0.0' # 自动布局
     pod 'Kingfisher', '~> 4.2.0' # 类似于sdwebimage
+    pod 'Kingfisher', '~> 4.2.0' # 图片轮播
 end

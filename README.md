@@ -20,3 +20,4 @@
 - [YYKit作者——郭曜源](https://blog.ibireme.com)
 - [面试题学习](https://zhuanlan.zhihu.com/c_154646059)
 - [唐巧——InfoQ](http://www.infoq.com/cn/profile/唐巧)
+- [很细致的博客](http://www.cnblogs.com/kenshincui/)

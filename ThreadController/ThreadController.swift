@@ -320,6 +320,9 @@ class ThreadController: SuperViewController {
     @objc func threadRun() -> Void {
         Klog(Thread.current)
     }
+    deinit {
+        Klog("dealloc")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

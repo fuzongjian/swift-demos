@@ -11,10 +11,10 @@ import UIKit
 class TimerViewController: SuperViewController,UITableViewDelegate,UITableViewDataSource {
     var timerCount: Int? = 0
     var timer: Timer?
+    var timer2: Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
         setCustomTitle(title: "定时器")
-        Klog("hello timer")
         configUI()
     }
     func configUI() {
@@ -34,8 +34,9 @@ class TimerViewController: SuperViewController,UITableViewDelegate,UITableViewDa
             weakSelf?.timer = timer
             weakSelf?.startTimer()
         }
-        
 
+        
+        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
