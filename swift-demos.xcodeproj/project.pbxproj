@@ -29,6 +29,7 @@
 		9B95F8D2207DB28F00D3B0B2 /* runloop.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95F8D1207DB28F00D3B0B2 /* runloop.png */; };
 		9B95F8D4207DBC2400D3B0B2 /* runloop-main.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95F8D3207DBC2400D3B0B2 /* runloop-main.png */; };
 		9B95F8D6207DBCEC00D3B0B2 /* runloop-des.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95F8D5207DBCEC00D3B0B2 /* runloop-des.png */; };
+		9B95F8D8207DE26800D3B0B2 /* runloop-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95F8D7207DE26800D3B0B2 /* runloop-in.png */; };
 		9BB04402200DEAEA009641A5 /* PodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04401200DEAEA009641A5 /* PodViewController.swift */; };
 		9BB04406200DEF04009641A5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04405200DEF04009641A5 /* Service.swift */; };
 		9BB0440D200F3AE4009641A5 /* SnapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0440C200F3AE4009641A5 /* SnapKitController.swift */; };
@@ -94,6 +95,7 @@
 		9B95F8D1207DB28F00D3B0B2 /* runloop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = runloop.png; sourceTree = "<group>"; };
 		9B95F8D3207DBC2400D3B0B2 /* runloop-main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "runloop-main.png"; sourceTree = "<group>"; };
 		9B95F8D5207DBCEC00D3B0B2 /* runloop-des.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "runloop-des.png"; sourceTree = "<group>"; };
+		9B95F8D7207DE26800D3B0B2 /* runloop-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "runloop-in.png"; sourceTree = "<group>"; };
 		9BB04401200DEAEA009641A5 /* PodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodViewController.swift; sourceTree = "<group>"; };
 		9BB04405200DEF04009641A5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9BB04408200F1C51009641A5 /* swift-demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-demos-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 		9B95F8D0207DB28F00D3B0B2 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				9B95F8D7207DE26800D3B0B2 /* runloop-in.png */,
 				9B95F8D3207DBC2400D3B0B2 /* runloop-main.png */,
 				9B95F8D1207DB28F00D3B0B2 /* runloop.png */,
 				9B95F8D5207DBCEC00D3B0B2 /* runloop-des.png */,
@@ -484,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B169A70200499130017E7ED /* LaunchScreen.storyboard in Resources */,
+				9B95F8D8207DE26800D3B0B2 /* runloop-in.png in Resources */,
 				9B95F8D4207DBC2400D3B0B2 /* runloop-main.png in Resources */,
 				9B95F8D2207DB28F00D3B0B2 /* runloop.png in Resources */,
 				9B169A6D200499130017E7ED /* Assets.xcassets in Resources */,
