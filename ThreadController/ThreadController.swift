@@ -57,6 +57,28 @@ class ThreadController: SuperViewController {
             make.centerX.equalTo(thread)
         }
         gcd.addTarget(self, action: #selector(gcd_method(_:)), for: .touchUpInside)
+        
+        // 输出顺序  15243
+        Klog("1")
+        DispatchQueue.global().async {
+            Klog("2")
+            DispatchQueue.main.async {
+                Klog("3")
+            }
+            Klog("4")
+        }
+        Klog("5")
+        
+        // 输出顺序 15243
+        Klog("1")
+        DispatchQueue.global().async {
+            Klog("2")
+            DispatchQueue.main.sync {
+                Klog("3")
+            }
+            Klog("4")
+        }
+        Klog("5")
     }
     /*   GCD（Grand Central Dispatch）的特性
      *  1、可用于多核的并行运算

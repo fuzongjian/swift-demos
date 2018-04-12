@@ -26,15 +26,15 @@ class TimerViewController: SuperViewController,UITableViewDelegate,UITableViewDa
             make.top.bottom.right.left.equalToSuperview()
         }
         weak var weakSelf = self
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
-//             当开始滑动的时候，runloop的mode由原来的Default切换到Event Tracking模式
-//             所以在原来的模式就会被关闭
-//             方法   将timer加入到NSRunloopCommonModes中
-            RunLoop.current.add(timer, forMode: .commonModes)
-            weakSelf?.timer = timer
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
             weakSelf?.startTimer()
         }
-
+        /*
+         *  当开始滑动的时候，runloop的mode由原来的Default切换到Event Tracking模式
+         *  所以在原来的模式就会被关闭
+         *  方法   将timer加入到NSRunloopCommonModes中
+         */
+        RunLoop.current.add(timer!, forMode: .commonModes)
         
         
     }

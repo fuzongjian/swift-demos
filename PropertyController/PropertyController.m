@@ -59,11 +59,29 @@
  * weak: 对象销毁之后会自动置为nil，防止野指针
  */
 
+/*     weak和strong
+ *  strong修饰的指针变量指向对象时，当指针指向新值或指针不复存在，相关联的对象就会自动释放
+ *  weak修饰的指针变量指向对象时，当对象的拥有者指向新值或者不存在时，weak修饰的指针会自动变为nil
+ */
+
+
 /* 原子操作
  * atomic: 置成员变量@property属性时，默认为atomic，提供多线程安全，在多线程环境下，原子操作是必要的，否则有可能引起错误的结果
  *         atomic的线程安全开销比较大，影响性能。
  * nonatomic: 非原子性访问，对属性赋值的时候不加锁，多线程并发访问会提高性能。如果不加此属性，默认原子操作
  */
+
+/*  内存管理基本原则
+ *  MRC
+ *  1、OC内部管理遵循“谁创建，谁释放，谁引用，谁管理”的机制。
+ *  2、当创建或引用一个对象的时候，需要向它发送alloc、copy、retain消息，当释放该对象时需要发送release消息。
+ *  3、当引用计数为0时，系统将会释放该对象，即手动管理机制（MRC）
+ *  ARC
+ *  1、iOS5.0之后引用自动管理机制——自动引用计数（ARC）
+ *  2、ARC会在适当的位置插入release、autorelease。
+ *
+ */
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
