@@ -19,6 +19,7 @@
 
 - **~~[4.堆和栈的理解](https://github.com/fuzongjian/swift-demos/blob/master/mds/stack.md)~~**
 - **~~[5.版本控制](https://github.com/fuzongjian/swift-demos/blob/master/mds/version.md)~~**
+- **~~[6.HTTP请求状态码](https://github.com/fuzongjian/swift-demos/blob/master/mds/http.md)~~**
 ### 博客学习
 - [YYKit作者——郭曜源](https://blog.ibireme.com)
 - [面试题学习](https://zhuanlan.zhihu.com/c_154646059)
