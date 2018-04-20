@@ -5,7 +5,7 @@
 
 | before iPhoneX | iPhoneX |
 |:----------:|:-----------:|
-|![](/img/iphone.jpeg)|  ![](/img/iPhoneX.jpeg)|
+| ![](/img/iphone.jpeg) | ![](/img/iPhoneX.jpeg) |
 - 代码判断
 ```
 extension UIDevice{

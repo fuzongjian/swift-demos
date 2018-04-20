@@ -21,6 +21,7 @@
 - **~~[5.版本控制](https://github.com/fuzongjian/swift-demos/blob/master/mds/version.md)~~**
 - **~~[6.HTTP请求状态码](https://github.com/fuzongjian/swift-demos/blob/master/mds/http.md)~~**
 - **~~[7.APNs机制](https://github.com/fuzongjian/swift-demos/blob/master/mds/apns.md)~~**
+- **~~[8.常识问题](https://github.com/fuzongjian/swift-demos/blob/master/mds/iphone.md)~~**
 ### 博客学习
 - [YYKit作者——郭曜源](https://blog.ibireme.com)
 - [面试题学习](https://zhuanlan.zhihu.com/c_154646059)
