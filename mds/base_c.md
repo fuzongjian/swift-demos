@@ -204,3 +204,24 @@ int main()
       }
   }
   ```
+- 冒泡排序
+
+  `相邻元素两两比较，将较大的数字放在后面，直到将所有数字全部排序。`
+  ```
+  // 冒泡排序  由大到小
+  void sort(){
+      double arr[]={1.78, 1.77, 1.82, 1.79, 1.85, 1.75, 1.86, 1.77, 1.81, 1.80};
+      for (int i = 0; i < 10; i ++) {
+          for (int j = i + 1; j < 10; j ++) {
+              if (arr[i] < arr[j]) {
+                  double temp = arr[i];
+                  arr[i] = arr[j];
+                  arr[j] = temp;
+              }
+          }
+      }
+      for (int i = 0; i < 10; i ++) {
+          printf("%.2f\n",arr[i]);
+      }
+  }
+  ```
