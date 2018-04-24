@@ -12,7 +12,7 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
     let array: [String] = [
         "基础部分","控件","三方库的使用","四种传值方式","核心动画高级技巧","Timer、RunLoop",
         "Swift-Block-OC","属性介绍","事件响应机制","KVO与KVC","高性能圆角",
-        "多线程","TCP/IP、Socket"
+        "多线程","TCP/IP、Socket","View的GetM"
                            ]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +76,8 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
             let controller:AnyClass = NSClassFromString(nameSpace + "." + "CornerController")!
             //创建对象
             let viewController = (controller as! UIViewController.Type).init()
+        }else if indexPath.row == 13{
+            self.navigationController?.pushViewController(GetViewMController(), animated: true)
         }
         
     }

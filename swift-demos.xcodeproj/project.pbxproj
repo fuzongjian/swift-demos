@@ -24,6 +24,7 @@
 		9B169AA1200759930017E7ED /* CollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169AA0200759930017E7ED /* CollectionController.swift */; };
 		9B169AA320075F950017E7ED /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B169AA220075F950017E7ED /* CustomCollectionCell.swift */; };
 		9B47D28E206799E1006EBF0E /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B47D28D206799E0006EBF0E /* AnimationController.swift */; };
+		9B52E240208EBAEB00399880 /* GetViewMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52E23F208EBAEB00399880 /* GetViewMController.swift */; };
 		9B7215B5206E098600480E06 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7215B4206E098600480E06 /* TimerViewController.swift */; };
 		9B95F8CC207C947C00D3B0B2 /* TCPIPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95F8CB207C947C00D3B0B2 /* TCPIPController.swift */; };
 		9B95F8D2207DB28F00D3B0B2 /* runloop.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95F8D1207DB28F00D3B0B2 /* runloop.png */; };
@@ -112,6 +113,7 @@
 		9B169AA0200759930017E7ED /* CollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionController.swift; sourceTree = "<group>"; };
 		9B169AA220075F950017E7ED /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		9B47D28D206799E0006EBF0E /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		9B52E23F208EBAEB00399880 /* GetViewMController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetViewMController.swift; sourceTree = "<group>"; };
 		9B7215B4206E098600480E06 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		9B95F8CB207C947C00D3B0B2 /* TCPIPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPIPController.swift; sourceTree = "<group>"; };
 		9B95F8D1207DB28F00D3B0B2 /* runloop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = runloop.png; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				9BE3D4AF207911C5007AB9CD /* CategoryExtention */,
 				9BE3D4FC207A0D66007AB9CD /* ThreadController */,
 				9B95F8CA207C946A00D3B0B2 /* TCPIPController */,
+				9B52E23C208EBA6900399880 /* GetViewM */,
 				9B95F8D0207DB28F00D3B0B2 /* img */,
 				9B169A69200499130017E7ED /* Main.storyboard */,
 				9B169A6C200499130017E7ED /* Assets.xcassets */,
@@ -286,6 +289,14 @@
 				9B47D28D206799E0006EBF0E /* AnimationController.swift */,
 			);
 			path = AnimationController;
+			sourceTree = SOURCE_ROOT;
+		};
+		9B52E23C208EBA6900399880 /* GetViewM */ = {
+			isa = PBXGroup;
+			children = (
+				9B52E23F208EBAEB00399880 /* GetViewMController.swift */,
+			);
+			path = GetViewM;
 			sourceTree = SOURCE_ROOT;
 		};
 		9B7215B0206CF39300480E06 /* WidgetController */ = {
@@ -682,6 +693,7 @@
 				9BC3F9412063C6E30096BFB6 /* CommonManager.swift in Sources */,
 				9B47D28E206799E1006EBF0E /* AnimationController.swift in Sources */,
 				9B08E1DE2008C07700513565 /* PhotoController.swift in Sources */,
+				9B52E240208EBAEB00399880 /* GetViewMController.swift in Sources */,
 				9B169A68200499130017E7ED /* ViewController.swift in Sources */,
 				9B169A96200605810017E7ED /* BaseViewController.swift in Sources */,
 				9BC3F93D2063B4370096BFB6 /* DelegateViewController.swift in Sources */,
