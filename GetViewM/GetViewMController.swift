@@ -28,12 +28,17 @@ class GetViewMController: SuperViewController {
             make.height.equalTo(40)
         }
         button.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
-        // Do any additional setup after loading the view.
+        
+        
+        
     }
     @objc func buttonClicked(_ sender: UIButton) -> Void {
         Klog("frame ===\(testView.frame) MinX === \(testView.frame.minX) MaxX === \(testView.frame.maxX)")
         Klog("frame ===\(testView.frame) MinY === \(testView.frame.minY) MaxY === \(testView.frame.maxY)")
         Klog("frame ===\(testView.frame) MidX === \(testView.frame.midX) MidY === \(testView.frame.midY)")
+        // 判断给定的点是否被一个CGRect包含
+        Klog("\(testView.frame.contains(CGPoint(x: 10,y: 10)))")
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
