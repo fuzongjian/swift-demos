@@ -389,3 +389,33 @@ void memoryMethod(){
     free(des);
 }
 ```
+### 经典实例
+- 二进制与十进的相互转换
+```
+void convertBinary(){
+    int n ;
+    printf("请输入一个十进制数:");
+    scanf("%d",&n);
+    int temp = n;
+    long long binaryNum = 0;
+    int remainder,i=1,step=1;
+    while (n!=0) {
+        remainder = n%2;// 余数
+        printf("Step %d: %d/2,余数 = %d,商 = %d\n",step++,n,remainder,n/2);
+        n /= 2; // 商继续除
+        binaryNum += remainder * i;
+        i *= 10;
+    }
+    printf("十进制数 %d 转换为二进制位 %lld\n",temp,binaryNum);
+    int result = 0;
+    long long newtemp = binaryNum;
+    i = 0;
+    while (binaryNum !=0) {
+        remainder = binaryNum%10;
+        binaryNum /= 10;
+        result += remainder*pow(2, i);
+        ++i;
+    }
+    printf("二进制数 %lld 转换为十进制为 %d\n",newtemp,result);
+}
+```
