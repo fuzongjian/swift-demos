@@ -7,7 +7,8 @@
 //
 
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
 void pointerMethod(){
     // 实际变量的声明
     int var = 20;
@@ -38,14 +39,50 @@ void operationMethod(){
         ptr--;
     }
 }
-void operationMethod2(){
-    
+int max(int x,int y){
+    return x > y ? x : y;
+}
+void methodPointer(){
+    // p是函数指针
+    int (* p)(int,int) = &max;
+    int a,b,c,d;
+    printf("请输入三个数：");
+    scanf("%d %d %d",&a,&b,&c);
+    // 与直接调用函数等价，d=max(max(a,b),c)
+    d = p(p(a,b),c);
+    printf("最大的数字是: %d\n",d);
+}
+void memoryMethod(){
+    char name[100];
+    char * des;
+    strcpy(name, "hello char");
+    // 动态分配内存
+    des = malloc(100 * sizeof(name));
+    if (des == NULL) {
+        fprintf(stderr, "Error - unable to allocate required memoty\n");
+    }else{
+        strcpy(des, "good good study,day day up.");
+    }
+    printf("name === %s\n",name);
+    printf("des: %s \n",des);
+    // 如果需要更大的内存
+    des = realloc(des, 100*sizeof(char));
+    if (des == NULL) {
+        fprintf(stderr, "Error - unable to allocate required memoty\n");
+    }else{
+        strcat(des, "she is class 10th.");
+    }
+    printf("name === %s\n",name);
+    printf("des: %s \n",des);
+    // 使用free()释放
+    free(des);
 }
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
 //    pointerMethod();
-    operationMethod();
-    
+//    operationMethod();
+//    methodPointer();
+    memoryMethod();
     return 0;
 }

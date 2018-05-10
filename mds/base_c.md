@@ -335,3 +335,57 @@ void operationMethod(){
     }
 }
 ```
+- 函数指针
+> 函数指针是指向函数的指针变量。
+```
+int max(int x,int y){
+    return x > y ? x : y;
+}
+void methodPointer(){
+    // p是函数指针
+    int (* p)(int,int) = &max;
+    int a,b,c,d;
+    printf("请输入三个数：");
+    scanf("%d %d %d",&a,&b,&c);
+    // 与直接调用函数等价，d=max(max(a,b),c)
+    d = p(p(a,b),c);
+    printf("最大的数字是: %d\n",d);
+}
+```
+### 内存
+
+| 函数 | 描述 |
+|:---:|:----:|
+| void *calloc(int num,int size)| 在内存中动态分配num个长度为size的连续空间，并将每个字节都初始化为0。即它的结果是分配了num*size个字节长度的内存空间，并且每个字节的值都是0 |
+| void free(void *address) | 该函数释放address所指向的内存块，释放的是动态分配的内存空间 |
+| void *malloc(int num) | 在堆区分配一块指定大小的内存空间，用来存放数据。这块内存空间在函数执行完成后不会被初始化，他们的值是未知的。
+| void *realloc(void *address,int newsize) | 该函数重新分配内存，把内存扩展到newsize |
+- 动态分配内存
+> 预先知道数组的大小，定义数组就比价容易；事先不知道的话，需要定义一个指针 ，指向未定所需内存大小的字符，后续在根据需要来分配内存。
+```
+void memoryMethod(){
+    char name[100];
+    char * des;
+    strcpy(name, "hello char");
+    // 动态分配内存
+    des = malloc(100 * sizeof(name));
+    if (des == NULL) {
+        fprintf(stderr, "Error - unable to allocate required memoty\n");
+    }else{
+        strcpy(des, "good good study,day day up.");
+    }
+    printf("name === %s\n",name);
+    printf("des: %s \n",des);
+    // 如果需要更大的内存
+    des = realloc(des, 100*sizeof(char));
+    if (des == NULL) {
+        fprintf(stderr, "Error - unable to allocate required memoty\n");
+    }else{
+        strcat(des, "she is class 10th.");
+    }
+    printf("name === %s\n",name);
+    printf("des: %s \n",des);
+    // 使用free()释放
+    free(des);
+}
+```
