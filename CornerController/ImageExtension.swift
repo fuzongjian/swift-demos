@@ -31,6 +31,7 @@ extension UIImage{
     }
 }
 extension UIImageView{
+    
     func cornerBetter(_ radius: CGFloat) -> Void {
         Klog(self.bounds)
         let maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: self.bounds.size)
@@ -41,5 +42,6 @@ extension UIImageView{
         maskLayer.path = maskPath.cgPath
         self.layer.mask = maskLayer
     }
+    
 }
 
