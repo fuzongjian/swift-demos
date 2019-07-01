@@ -8,8 +8,13 @@
 
 #import "OcBlockController.h"
 #import "Person.h"
+typedef void(^FJBlock)(void);
+typedef void(^ZJBlock)(OcBlockController *);
 @interface OcBlockController ()
 @property (nonatomic,copy) returnBlock blockValue;
+@property (nonatomic,copy) FJBlock block;
+@property (nonatomic,copy) ZJBlock zjBlock;
+@property (nonatomic,copy) NSString * name;
 @end
 
 @implementation OcBlockController
@@ -36,13 +41,77 @@
     
     //
     [self testBlock];
+    
+    [self typeBlock];
+    
+    [self circleBlock3];
+}
+- (void)circleBlock3{
+    self.name = @"fuzongjian";
+    // 强弱共舞
+    self.zjBlock = ^(OcBlockController * vc){
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            vc.name = @"hello world";
+            NSLog(@" === %@",vc.name);
+        });
+    };
+    self.zjBlock(self);
+}
+- (void)circleBlock2{
+    self.name = @"fuzongjian";
+    __block OcBlockController * vc = self;
+    // 强弱共舞
+    self.block = ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            vc.name = @"hello world";
+            NSLog(@" === %@",vc.name);
+            vc = nil;
+        });
+    };
+    self.block();
+}
+- (void)circleBlock1{
+    self.name = @"fuzongjian";
+    __weak typeof(self) weakSelf = self;
+    // 强弱共舞
+    self.block = ^{
+        // 临时变量会自动加到autorealsepool中， 自动释放。
+        __strong typeof(self) strongSelf = weakSelf;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            strongSelf.name = @"hello world";
+            NSLog(@" === %@",strongSelf.name);
+        });
+    };
+    self.block();
+}
+- (void)typeBlock{
+    /* 三种block
+     * 栈    <__NSStackBlock__: 0x7ffee9fb8298>
+     * 堆    <__NSMallocBlock__: 0x60000369cdb0>
+     * 全局  <__NSGlobalBlock__: 0x10f995c58>
+     */
+    void (^block1)(void) = ^{
+        NSLog(@"hello block");
+    };
+    NSLog(@"global === %@",block1);
+    
+    // 捕获外界变量 --copy-- 将栈区拷贝到堆区
+    int a = 10;
+    void (^block2)(void) = ^{
+        NSLog(@"hello block---%d",a);
+    };
+    NSLog(@"malloc === %@",block2);
+    
+    NSLog(@"stack === %@",^{
+        NSLog(@"hello block---%d",a);
+    });
 }
 - (void)testBlock{
     Person * person = [[Person alloc] init];
-    __weak Person * weakPerson = person;
+//    Person * weakPerson = person;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [weakPerson test];
-        NSLog(@"%@",weakPerson);
+        [person test];
+        NSLog(@"%@",person);
     });
 }
 // 界面传值
