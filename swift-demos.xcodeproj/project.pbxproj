@@ -31,6 +31,8 @@
 		9B95F8D4207DBC2400D3B0B2 /* runloop-main.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95F8D3207DBC2400D3B0B2 /* runloop-main.png */; };
 		9B95F8D6207DBCEC00D3B0B2 /* runloop-des.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95F8D5207DBCEC00D3B0B2 /* runloop-des.png */; };
 		9B95F8D8207DE26800D3B0B2 /* runloop-in.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95F8D7207DE26800D3B0B2 /* runloop-in.png */; };
+		9BABF3ED22CF41770037F242 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BABF3EC22CF41770037F242 /* KVOController.m */; };
+		9BABF3F022CF43760037F242 /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BABF3EF22CF43760037F242 /* Human.m */; };
 		9BB04402200DEAEA009641A5 /* PodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04401200DEAEA009641A5 /* PodViewController.swift */; };
 		9BB04406200DEF04009641A5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB04405200DEF04009641A5 /* Service.swift */; };
 		9BB0440D200F3AE4009641A5 /* SnapKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0440C200F3AE4009641A5 /* SnapKitController.swift */; };
@@ -120,6 +122,10 @@
 		9B95F8D3207DBC2400D3B0B2 /* runloop-main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "runloop-main.png"; sourceTree = "<group>"; };
 		9B95F8D5207DBCEC00D3B0B2 /* runloop-des.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "runloop-des.png"; sourceTree = "<group>"; };
 		9B95F8D7207DE26800D3B0B2 /* runloop-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "runloop-in.png"; sourceTree = "<group>"; };
+		9BABF3EB22CF41770037F242 /* KVOController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOController.h; sourceTree = "<group>"; };
+		9BABF3EC22CF41770037F242 /* KVOController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOController.m; sourceTree = "<group>"; };
+		9BABF3EE22CF43760037F242 /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		9BABF3EF22CF43760037F242 /* Human.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
 		9BB04401200DEAEA009641A5 /* PodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodViewController.swift; sourceTree = "<group>"; };
 		9BB04405200DEF04009641A5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9BB04408200F1C51009641A5 /* swift-demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-demos-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -407,6 +413,10 @@
 			isa = PBXGroup;
 			children = (
 				9BE3D4A320738495007AB9CD /* KVCKVOController.swift */,
+				9BABF3EB22CF41770037F242 /* KVOController.h */,
+				9BABF3EC22CF41770037F242 /* KVOController.m */,
+				9BABF3EE22CF43760037F242 /* Human.h */,
+				9BABF3EF22CF43760037F242 /* Human.m */,
 			);
 			path = KVCKVOController;
 			sourceTree = SOURCE_ROOT;
@@ -676,6 +686,7 @@
 				9B47D28E206799E1006EBF0E /* AnimationController.swift in Sources */,
 				9B08E1DE2008C07700513565 /* PhotoController.swift in Sources */,
 				9B52E240208EBAEB00399880 /* GetViewMController.swift in Sources */,
+				9BABF3F022CF43760037F242 /* Human.m in Sources */,
 				9B169A68200499130017E7ED /* ViewController.swift in Sources */,
 				9B169A96200605810017E7ED /* BaseViewController.swift in Sources */,
 				9BC3F93D2063B4370096BFB6 /* DelegateViewController.swift in Sources */,
@@ -700,6 +711,7 @@
 				9BE3D4A72074564C007AB9CD /* CornerController.swift in Sources */,
 				9B169A66200499130017E7ED /* AppDelegate.swift in Sources */,
 				9BC3F93B2063B1510096BFB6 /* PassValueController.swift in Sources */,
+				9BABF3ED22CF41770037F242 /* KVOController.m in Sources */,
 				9B169AA320075F950017E7ED /* CustomCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

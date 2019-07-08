@@ -60,7 +60,7 @@ class ViewController: SuperViewController,UITableViewDataSource,UITableViewDeleg
         }else if indexPath.row == 8{
             self.navigationController?.pushViewController(ResponseController(), animated: true)
         }else if indexPath.row == 9{
-            self.navigationController?.pushViewController(KVCKVOController(), animated: true)
+            self.navigationController?.pushViewController(KVOController(), animated: true)
         }else if indexPath.row == 10{
             self.navigationController?.pushViewController(CornerController(), animated: true)
         }else if indexPath.row == 11 {
