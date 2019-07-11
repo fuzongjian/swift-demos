@@ -8,6 +8,7 @@
 
 #import "KVOController.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 #import "Human.h"
 @interface KVOController()
 @property (nonatomic,strong) Human * man;
@@ -17,11 +18,17 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self getMethod];
+    [self handleStart];
     
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    NSLog(@"%@",change);
+    NSLog(@" === %@",change);
+}
+- (void)handleStart{
+    Human * obj = [[Human alloc] init];
+    [obj addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld| NSKeyValueObservingOptionNew context:nil];
+    [obj willChangeValueForKey:@"name"];
+    [obj didChangeValueForKey:@"name"];
 }
 - (void)getMethod{
     Human * obj = [[Human alloc] init];
@@ -36,11 +43,13 @@
         const char * typeEncoding = method_getTypeEncoding(method);
         NSLog(@"methodName: %s, methodTypeEncoding: %s",name,typeEncoding);
     }
-//    obj.name = @"fuzongjian";
-//    SEL sel = sel_registerName("_isKVOA");
-//    BOOL isKVOA = ((bool(*)(id,SEL))objc_msgSend)(obj,sel);
-//    NSLog(@"isKVOA == %d",isKVOA);
-    
+    obj.name = @"fuzongjian";
+    SEL sel = sel_registerName("_isKVOA");
+    BOOL isKVOA = ((bool(*)(id,SEL))objc_msgSend)(obj,sel);
+    NSLog(@"isKVOA == %d",isKVOA);
+    SEL selForClass = sel_registerName("class");
+    Class currentClass = ((Class(*)(id,SEL))objc_msgSend)(obj,selForClass);
+    NSLog(@"currentClass === %@",currentClass);
 }
 - (void)getProperty{// 查看成员变量和属性
     Human * obj = [[Human alloc] init];
