@@ -1,0 +1,21 @@
+### 深究的知识点
+##### iOS常见只是点
+- block
+- Runtime
+- RunLoop
+- 常见设计模式
+- KVC与KVO
+- 多线程GCD、NSThread、NSOperation(场景、性能)
+- autoreleasepool
+- 常见属性修饰符，各自使用场景
+- ARC与MRC（内存管理机制）
+- 消息传递
+- 事件传递和响应机制
+- MVC模式和MVVM模式区别
+- JSPatch原理
+
+##### 计算机网络
+- TCP、UDP区别
+- HTTPS、HTTP区别（安全性、https加密过程）
+- TCP三次握手，为什么要三次握手、四次挥手、拥塞机制是什么
+- 状态码

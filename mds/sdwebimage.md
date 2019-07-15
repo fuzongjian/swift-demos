@@ -5,7 +5,7 @@
 | :------------- | :------------- |
 | SDWebImageManager | 调度各个类 |
 | SDWebImageDownLoader | 下载模块 |
-| SDImageCache | 缓冲（内存缓存和磁盘缓存 |
+| SDImageCache | 缓冲（内存缓存和磁盘缓存) |
 | SDWebImageCoderManager | 图片解码 |
 `几个类的关系如下：`
 
